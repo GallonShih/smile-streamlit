@@ -1,0 +1,22 @@
+# 忽略 Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# 忽略虛擬環境
+venv/
+.venv/
+
+# 忽略 Git 相關文件
+.git/
+.gitignore
+
+# 忽略本地環境變數
+.env
+
+# 忽略 VSCode 設定
+.vscode/
+
+# 忽略 Docker 自己的檔案
+Dockerfile
+docker-compose.yml

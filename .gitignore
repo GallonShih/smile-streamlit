@@ -1,0 +1,39 @@
+# 忽略 data/ 目錄
+data/
+
+# 忽略 Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 忽略 VSCode 設定
+.vscode/
+
+# 忽略環境變數設定檔
+.env
+*.env
+
+# 忽略虛擬環境
+venv/
+.venv/
+
+# 忽略 Docker build 產生的檔案
+docker-compose.override.yml
+*.log
+*.pid
+*.sock
+
+# 忽略 Python packaging 相關檔案
+dist/
+build/
+*.egg-info/
+
+# 忽略 macOS 系統文件
+.DS_Store
+
+# 忽略 Jupyter Notebook checkpoint
+.ipynb_checkpoints/
+
+# 忽略 Streamlit 產生的 cache
+.streamlit/
