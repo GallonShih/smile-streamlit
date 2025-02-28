@@ -3,6 +3,10 @@ __pycache__/
 *.pyc
 *.pyo
 
+# 忽略test 檔案
+test*.ipynb
+test*.py
+
 # 忽略虛擬環境
 venv/
 .venv/

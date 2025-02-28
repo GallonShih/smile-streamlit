@@ -9,7 +9,7 @@ from utils.plot_utils import generate_line_chart, generate_top_users_chart
 import datetime
 
 # 設定 Streamlit 頁面
-st.set_page_config(page_title="後宮甄嬛傳：直撥留言", layout="wide")
+st.set_page_config(page_title="後宮甄嬛傳：直播留言", layout="wide")
 
 # 載入資料
 if "df" not in st.session_state:
@@ -23,7 +23,7 @@ if "df_emote" not in st.session_state:
 df_emote = st.session_state.df_emote  # 取得資料
 
 # Heatmap 標題
-st.title("🌨️ 那年杏花微雨，你說你是果郡王 ☔")
+st.title("🌨️ 那年杏花微雨，你說你是果子狸 ☔")
 
 if df is not None:
 

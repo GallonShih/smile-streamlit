@@ -37,3 +37,6 @@ build/
 
 # 忽略 Streamlit 產生的 cache
 .streamlit/
+
+# 忽略 test_ 開頭的檔案
+test*

@@ -26,13 +26,9 @@ def generate_line_chart(df):
         )
     )
 
-    # **X 軸標籤格式**
-    tick_format = "%Y-%m-%d %h:%M" if (max_date - min_date).days > 1 else "%h:%M"
-
     # **設定 X 軸**
     fig.update_xaxes(
         showgrid=True,
-        tickformat=tick_format,
         tickangle=45,  # **避免過密時，標籤傾斜**
         tickmode="auto",
         tickfont=dict(size=18),  # 🔥 放大 X 軸標籤
@@ -84,6 +80,9 @@ def generate_top_users_chart(filtered_df):
     # **篩選所有訊息數 ≥ 第 5 名的**
     top_users = top_users[top_users["message_count"] >= min_top5_count]
 
+    bar_height = 60
+    chart_height = max(400, len(top_users) * bar_height)
+
     top_users["message_count_str"] = top_users["message_count"].apply(lambda x: f"{x:,}")
 
     # **建立條形圖**
@@ -104,7 +103,7 @@ def generate_top_users_chart(filtered_df):
     fig.update_layout(
         xaxis_title="訊息數",
         yaxis_title="",
-        height=400,
+        height=chart_height,
         margin=dict(l=40, r=40, t=50, b=40),
         hovermode=False,
         dragmode=False,  # 禁止拖動
